@@ -3,15 +3,29 @@ package strategy;
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		// we can provide any strategy to do the sorting 
-        int[] array = {1, 2, 3, 4, 5 };
+		
+		ArrayList<Product> list = new ArrayList<Product>();
+		list.add(new Product("book", 150, 200)); 
+        list.add(new Product("pencil", 5, 10)); 
+        list.add(new Product("laptop", 10000, 10000)); 
+        list.add(new Product("arduino", 1000, 2000));
+        
         Context ctx = new Context(new BubbleSort());
-        ctx.arrange(array);
+        ctx.arrange(list);
         
         // we can change the strategy without changing Context class
         ctx = new Context(new QuickSort());
-        ctx.arrange(array);
+        ctx.arrange(list);
+
+        System.out.println("Products after sorting : "); 
+        for (Product product: list) 
+        { 
+            System.out.println(product.getName() + " " + 
+                               product.getPrice() + " " + 
+                               product.getValue());
+        }
 	
 	// try it yourself then …
 
