@@ -3,4 +3,7 @@ import java.io.*;
 import java.util.*;
 
 public interface Comparable
-{ }
+{
+  public int compareTo(Product p);
+  
+}
