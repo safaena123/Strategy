@@ -6,11 +6,10 @@ public class Test {
 		
 		// we can provide any strategy to do the sorting 
 		
-		Product product[] = new Product[4];
-		product[0] = new Product("book", 150, 200);
-		product[1] = new Product("pen", 10, 20);
-		product[2] = new Product("laptop", 15000, 20000);
-		product[3] = new Product("arduino", 1500, 2000);
+		 Product[] product = { new Product("book", 150, 200),
+		 new Product("pen", 10, 20),
+		 new Product("laptop", 15000, 20000),
+		 new Product("arduino", 1500, 2000) };
         
         Context ctx = new Context(new BubbleSort());
         ctx.arrange(product);

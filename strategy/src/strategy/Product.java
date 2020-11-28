@@ -13,7 +13,9 @@ public class Product implements Comparable<Product>
     { 
         return this.price - p.price; 
     }
+    
     //To compare products by value
+    @Override
     public int compareTo(Product p) 
     { 
         return this.value - p.value; 
